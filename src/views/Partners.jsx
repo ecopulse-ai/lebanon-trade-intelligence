@@ -27,15 +27,7 @@ export default function Partners() {
   const [search, setSearch] = useState('')
   const [sortBy, setSortBy] = useState('total')   // total | imports | exports | balance
 
-  if (parts.loading || bilateral.loading) {
-    return <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12"><Loading /></div>
-  }
-
-  const partners = parts.data.partners
-  const totals = {
-    imports: partners.reduce((s, p) => s + p.imports, 0),
-    exports: partners.reduce((s, p) => s + p.total_exports, 0),
-  }
+  const partners = parts.data?.partners ?? []
 
   const filtered = useMemo(() => {
     const q = search.toLowerCase().trim()
@@ -50,6 +42,15 @@ export default function Partners() {
     })
     return list
   }, [partners, search, sortBy])
+
+  if (parts.loading || bilateral.loading) {
+    return <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12"><Loading /></div>
+  }
+
+  const totals = {
+    imports: partners.reduce((s, p) => s + p.imports, 0),
+    exports: partners.reduce((s, p) => s + p.total_exports, 0),
+  }
 
   const selectedPartner = selected ? partners.find(p => p.code === selected) : null
   const selectedComposition = selected ? (bilateral.data[String(selected)] || []) : []

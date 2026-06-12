@@ -25,11 +25,7 @@ export default function HSExplorer() {
   const [openHead, setOpenHead] = useState(null)
   const [search, setSearch] = useState('')
 
-  if (exp.loading) {
-    return <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12"><Loading /></div>
-  }
-
-  const chapters = exp.data.chapters
+  const chapters = exp.data?.chapters ?? []
 
   const filteredChapters = useMemo(() => {
     if (!search.trim()) return chapters
@@ -50,6 +46,10 @@ export default function HSExplorer() {
       })
       .filter(Boolean)
   }, [chapters, search])
+
+  if (exp.loading) {
+    return <div className="max-w-[1400px] mx-auto px-6 lg:px-10 py-12"><Loading /></div>
+  }
 
   const totalForFlow = chapters.reduce((s, c) => s + (c[flow] || 0), 0)
   const sorted = [...filteredChapters].sort((a, b) => (b[flow] || 0) - (a[flow] || 0))
