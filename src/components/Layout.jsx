@@ -137,9 +137,9 @@ function CedarMark({ small = false }) {
     <svg width={s} height={s} viewBox="0 0 32 32" aria-hidden="true">
       <path
         d="M16 4 L10 13 L13 13 L8 20 L12 20 L6 28 L26 28 L20 20 L24 20 L19 13 L22 13 Z"
-        fill="#3d5a40"
+        fill="#8bab86"
       />
-      <rect x="14" y="26" width="4" height="3" fill="#7a2e2e" />
+      <rect x="14" y="26" width="4" height="3" fill="#cf7d7d" />
     </svg>
   )
 }

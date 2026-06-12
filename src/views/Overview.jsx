@@ -221,11 +221,11 @@ function TopChapters({ chapters }) {
                   imp: c.imports / 1e6,
                   exp: (c.dx + c.rx) / 1e6,
                 }))} layout="vertical" margin={{ top: 4, right: 16, bottom: 4, left: 8 }}>
-                  <XAxis type="number" stroke="#8a8a8a" fontSize={10} />
-                  <YAxis dataKey="name" type="category" stroke="#0d1117" fontSize={10.5} width={110} interval={0} />
+                  <XAxis type="number" stroke="#7c7563" fontSize={10} />
+                  <YAxis dataKey="name" type="category" stroke="#e2dccb" fontSize={10.5} width={110} interval={0} />
                   <Tooltip formatter={(v) => `$${Number(v).toFixed(0)}M`} />
-                  <Bar dataKey="imp" fill="#7a2e2e" name="Imports" />
-                  <Bar dataKey="exp" fill="#3d5a40" name="Exports" />
+                  <Bar dataKey="imp" fill="#cf7d7d" name="Imports" />
+                  <Bar dataKey="exp" fill="#8bab86" name="Exports" />
                 </BarChart>
               </ResponsiveContainer>
             </div>

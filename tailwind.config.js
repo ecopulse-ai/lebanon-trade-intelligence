@@ -4,28 +4,30 @@ export default {
   theme: {
     extend: {
       colors: {
-        // Editorial cream-and-ink palette
-        bone:    '#f5f1e8',
-        bone2:   '#ebe6d8',
-        ink:     '#0d1117',
-        ink2:    '#1c2128',
-        graphite:'#3d3d3d',
-        slate1:  '#5a5a5a',
-        slate2:  '#8a8a8a',
-        rule:    '#d4cdb8',
+        // Editorial dark palette — warm charcoal in place of cream.
+        // Token names are kept (bone = page surface, ink = primary text)
+        // so component classes need no changes; only the values invert.
+        bone:    '#16130d',
+        bone2:   '#211d15',
+        ink:     '#f3eee2',
+        ink2:    '#e2dccb',
+        graphite:'#c9c2b0',
+        slate1:  '#a59e8c',
+        slate2:  '#7c7563',
+        rule:    '#39342a',
 
-        // Cedar green — Lebanon's national tree, taken as the dominant accent
-        cedar:   '#3d5a40',
-        cedar2:  '#2a3f2c',
-        cedar3:  '#7a9b78',
+        // Cedar green — Lebanon's national tree, brightened for dark ground
+        cedar:   '#8bab86',
+        cedar2:  '#6f8f6c',
+        cedar3:  '#a9c4a4',
 
         // Burgundy — secondary accent for deficits/imports
-        burgundy:'#7a2e2e',
-        burgundy2:'#a04545',
+        burgundy:'#cf7d7d',
+        burgundy2:'#e09a9a',
 
         // Gold — Lebanon's gold trade is so dominant it earns its own accent
-        gold:    '#a87c2a',
-        gold2:   '#d4a548',
+        gold:    '#d8b057',
+        gold2:   '#ecc878',
       },
       fontFamily: {
         display: ['"Fraunces"', '"Cormorant Garamond"', 'Georgia', 'serif'],

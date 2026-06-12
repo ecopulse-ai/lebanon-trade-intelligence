@@ -112,10 +112,10 @@ export default function ReExports() {
                 layout="vertical"
                 margin={{ top: 4, right: 20, bottom: 4, left: 8 }}
               >
-                <XAxis type="number" stroke="#8a8a8a" fontSize={10} />
-                <YAxis dataKey="name" type="category" stroke="#0d1117" fontSize={10.5} width={130} interval={0} />
+                <XAxis type="number" stroke="#7c7563" fontSize={10} />
+                <YAxis dataKey="name" type="category" stroke="#e2dccb" fontSize={10.5} width={130} interval={0} />
                 <Tooltip formatter={(v) => `$${Number(v).toFixed(1)}M`} />
-                <Bar dataKey="value" fill="#a87c2a" name="Re-Exports" />
+                <Bar dataKey="value" fill="#d8b057" name="Re-Exports" />
               </BarChart>
             </ResponsiveContainer>
           </div>

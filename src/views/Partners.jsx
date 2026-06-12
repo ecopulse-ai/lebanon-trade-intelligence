@@ -182,11 +182,11 @@ function PartnerDetail({ partner, composition }) {
       <div className="p-3 h-[280px] border-b border-rule">
         <ResponsiveContainer width="100%" height="100%">
           <BarChart data={chartData} layout="vertical" margin={{ top: 4, right: 16, bottom: 4, left: 8 }}>
-            <XAxis type="number" stroke="#8a8a8a" fontSize={10} />
-            <YAxis dataKey="name" type="category" stroke="#0d1117" fontSize={10} width={100} interval={0} />
+            <XAxis type="number" stroke="#7c7563" fontSize={10} />
+            <YAxis dataKey="name" type="category" stroke="#e2dccb" fontSize={10} width={100} interval={0} />
             <Tooltip formatter={(v) => `$${Number(v).toFixed(1)}M`} />
-            <Bar dataKey="imp" fill="#7a2e2e" name="Imports" />
-            <Bar dataKey="exp" fill="#3d5a40" name="Exports" />
+            <Bar dataKey="imp" fill="#cf7d7d" name="Imports" />
+            <Bar dataKey="exp" fill="#8bab86" name="Exports" />
           </BarChart>
         </ResponsiveContainer>
       </div>
